@@ -1,5 +1,5 @@
 list1, list2 = File
-  .read("input/day_1.txt")
+  .read("../input/day1.txt")
   .split("\n")
   .map { |l| l.split("   ") }
   .transpose
@@ -7,6 +7,6 @@ list1, list2 = File
 list1.map!(&:to_i)
 list2.map!(&:to_i)
 
-result = list1.inject(0) { |sum, x| sum + x * list2.count(x) }
+result = list1.inject(0) { |s, i| s + i * list2.count(i) }
 
 puts result
