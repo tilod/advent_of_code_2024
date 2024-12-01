@@ -1,5 +1,5 @@
 list1, list2 = File
-  .read("day_1/input.txt")
+  .read("input/day_1.txt")
   .split("\n")
   .map { |l| l.split("   ") }
   .transpose
