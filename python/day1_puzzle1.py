@@ -1,4 +1,4 @@
-with open("../input/day1.txt", "r") as f:
+with open("../_input/day1.txt", "r") as f:
     list1, list2 = zip(*[line.strip().split("   ") for line in f.readlines()])
 
 list1 = sorted(map(int, list1))
