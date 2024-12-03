@@ -13,6 +13,10 @@ fs.readFileSync("../_input/day1.txt", "utf8").split("\n").forEach(line => {
 list1.sort();
 list2.sort();
 
-result = list1.map((i, index) => Math.abs(i - list2[index])).reduce((s, i) => s + i, 0);
+result1 = list1.map((i, index) => Math.abs(i - list2[index])).reduce((s, i) => s + i, 0);
+result2 = list1.reduce((sum, i) => {
+  return sum + i * list2.filter(x => x === i).length;
+}, 0);
 
-console.log(result);
+console.log(result1);
+console.log(result2);
