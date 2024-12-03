@@ -21,7 +21,7 @@ class ReportsWithDampener
     @dampened_reports = []
     @report.line.size.times do |index|
       @dampened_reports <<
-        Report.new(@report.line[0...index] + @report.line[(index + 1)..-1])
+        Report.new(@report.line[...index] + @report.line[(index + 1)...])
     end
   end
 
